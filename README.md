@@ -55,7 +55,7 @@ Smart Recipe Generator is a full-stack web application that helps users discover
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/askpranay/smart-recipe-generator-exp.git
+git clone https://github.com/askpranay/smart-recipe-generator-ask.git
 cd smart-recipe-generator-exp
 ```
 

@@ -51,7 +51,6 @@ export const RecipeProvider = ({ children }) => {
     localStorage.setItem('ratings', JSON.stringify(ratings));
   }, [ratings]);
 
-  // ✅ FIXED: Add ingredient using functional update
   // This solves the issue where loops would only add the last item
   const addIngredient = (ingredient) => {
     const normalizedIngredient = ingredient.toLowerCase().trim();
@@ -67,7 +66,7 @@ export const RecipeProvider = ({ children }) => {
     });
   };
 
-  // ✅ FIXED: Remove ingredient using functional update
+  // Remove ingredient using functional update
   const removeIngredient = (ingredient) => {
     setUserIngredients(prevIngredients => 
       prevIngredients.filter(i => i !== ingredient)
@@ -79,7 +78,7 @@ export const RecipeProvider = ({ children }) => {
     setUserIngredients([]);
   };
 
-  // ✅ FIXED: Toggle favorite using functional update
+  // Toggle favorite using functional update
   const toggleFavorite = (recipeId) => {
     setFavorites(prevFavorites => {
       if (prevFavorites.includes(recipeId)) {
@@ -90,7 +89,7 @@ export const RecipeProvider = ({ children }) => {
     });
   };
 
-  // ✅ FIXED: Rate recipe using functional update
+  // Rate recipe using functional update
   const rateRecipe = (recipeId, rating) => {
     setRatings(prevRatings => ({
       ...prevRatings,
